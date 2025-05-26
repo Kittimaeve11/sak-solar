@@ -1,0 +1,144 @@
+/* === ตั้งค่าพื้นฐาน === */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* เมนูหลัก */
+.navmenu {
+  margin-block: 15px;
+}
+
+.navmenu .nav-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navmenu .nav-root li a {
+  color: #102e50;
+  text-decoration: none;
+  padding: 20px 5px 3px 5px;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/* ลิงก์ Hover และ Active */
+.navmenu .nav-root li a:hover {
+  color: #5c83b6;
+}
+
+.navmenu .nav-root li a:hover::after,
+.navmenu .nav-root li a.active::after {
+  width: 100%;
+}
+
+.navmenu .nav-root li a.active {
+  color: var(--nav-color-color, #5c83b6);
+}
+
+/* ปุ่ม hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #102e50;
+  margin-left: auto;
+}
+
+/* Dropdown หลัก */
+.dropdown {
+  position: relative;
+}
+
+/* เมนูย่อย dropdown */
+.dropdown-menu {
+  display: none; /* ซ่อนตามปกติ */
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 5px 0;
+
+  /* ✅ แก้ให้เรียงแนวตั้ง */
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex !important;
+}
+
+/* เมนูย่อยแต่ละรายการ */
+.dropdown-menu li {
+  display: block;
+  padding: 8px 20px;
+}
+
+/* ลิงก์ในเมนูย่อย */
+.dropdown-menu li a {
+  color: #102e50;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  color: #5c83b6;
+}
+
+.dropdown-menu li a.active {
+  color: var(--nav-color-color, #5c83b6);
+  font-weight: bold;
+}
+
+/* === Responsive สำหรับมือถือ === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navmenu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    width: 100%;
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+  }
+
+  .navmenu.active {
+    display: flex;
+  }
+
+  .navmenu .nav-root {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .navmenu .nav-root li a {
+    padding: 10px 0;
+  }
+
+  /* ✅ เพิ่มให้ dropdown menu ทำงานปกติบน mobile */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+}

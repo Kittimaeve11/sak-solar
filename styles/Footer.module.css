@@ -1,0 +1,83 @@
+.footer {
+  width: 100%;
+  background-color: #2c2e31;
+  color: white;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 0 5rem; /* ✅ เพิ่มระยะห่างซ้ายขวา */
+}
+
+.column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.column h5 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  margin-bottom: 8px;
+}
+
+.column p {
+  margin: 5px 0;
+}
+
+.socialIcons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.footerBottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #ececec;
+    background-color: rgb(32, 31, 39);
+    border-top: 2px solid #444444;
+    margin-top: 20px;
+  }
+  .column ul li a {
+    color: #ffffff; /* ตัวหนังสือสีขาว */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .column ul li a:hover {
+    color: #cccccc; /* สีตอน hover เป็นเทาอ่อน */
+  }
+  
+/* เพิ่มเข้าไปในไฟล์ Footer.module.css */
+
+@media (max-width: 600px) {
+  .footerContent {
+    flex-direction: column;
+  }
+
+  .column {
+    order: 0;
+  }
+
+  .column:last-child {
+    order: 4; /* ให้ column "ติดต่อเรา" ไปอยู่ล่างสุด */
+  }
+}
