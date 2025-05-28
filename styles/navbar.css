@@ -50,9 +50,11 @@
     display: flex;
     align-items: center;
     font-size: 16px;
-    color: #11325a;
+    color: #CBDCEB;
     user-select: none;
     gap: 0rem; /* เพิ่มช่องว่างระหว่างภาษา */
+    margin: 0px 8px;
+    margin-left: auto;
   }
 
   .localeItem {
@@ -63,17 +65,17 @@
   }
 
   .localeItem.disabled {
-    opacity: 0.5;
+    color: #608BC1;
     pointer-events: none;
   }
 
   .separator {
     width: 0rem;
   }
-
+/* เส้นตรงกลางปุ่มเปลี่ยนภาษา */
   .separator {
-    border-left: 1px solid #11325a;
-    height: 20px;
+    border-left: 1.8px solid #133E87;
+    height: 18px;
     margin: 0 8px;
   }
 
@@ -94,6 +96,35 @@
   .contactButton:hover {
     background-color: #486594;
   }
+  .contactActions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* ปุ่มโทรศัพท์ */
+  .callLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #608BC1; /* สีฟ้าอ่อน */
+    font-size: 16px;
+    font-weight: 500;
+    gap: 6px;
+  }
+  
+  .phoneIcon {
+    font-size: 20px;
+    color: #608BC1; /* สีเดียวกับตัวเลข */
+  }
+  
+  .phoneNumber {
+    color: #608BC1;
+    font-size: 25px;
+    font-weight: 600; /* ใช้ Thin */
+
+  }
+    
 /* ========== เดสก์ท็อปหน้าจอแคบ (ไม่ให้ h1/h3 ตกบรรทัด) ========== */
 @media (max-width: 1280px) {
   .companyName {

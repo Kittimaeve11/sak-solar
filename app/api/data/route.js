@@ -40,19 +40,34 @@ export async function GET() {
         icon: 'facebook'
       },
       {
+        id: 'line',
+        name: 'Line',
+        name1: '@SaksiamSolar',
+        url: 'https://lin.ee/BP3uYCu',
+        icon: 'line'
+      },
+      {
+        id: 'tiktok',
+        name: 'TikTok',
+        name1: 'ศักดิ์สยามลิสซิ่ง',
+        url: 'https://www.youtube.com/channel/UCSkTr6d-9ElKUzjQIRKUxIA',
+        icon: 'tiktok'
+      },
+      {
+        id: 'instagram',
+        name: 'Instagram',
+        name1: 'ศักดิ์สยามลิสซิ่ง',
+        url: 'https://www.youtube.com/channel/UCSkTr6d-9ElKUzjQIRKUxIA',
+        icon: 'instagram'
+      },
+      {
         id: 'youTube',
         name: 'YouTube',
         name1: 'ศักดิ์สยามลิสซิ่ง',
         url: 'https://www.youtube.com/channel/UCSkTr6d-9ElKUzjQIRKUxIA',
         icon: 'youtube'
       },
-      {
-        id: 'line',
-        name: 'Line',
-        name1: '@SaksiamSolar',
-        url: 'https://lin.ee/BP3uYCu',
-        icon: 'line'
-      }
+
     ]
     
   };

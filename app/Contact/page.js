@@ -3,7 +3,8 @@
 import { useEffect, useState, useMemo } from "react";
 import { useLocale } from '../Context/LocaleContext';
 import { FaLine } from "react-icons/fa6";
-import { FaFacebookSquare,FaYoutube  } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+import { FaFacebookSquare, FaYoutube, FaInstagramSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoChevronBackOutline } from "react-icons/io5";
 import '../../styles/contact.css';
@@ -21,7 +22,9 @@ export default function Page() {
 
   const iconComponentByKey = useMemo(() => ({
     facebook: <FaFacebookSquare color="#1877f2" size={36} />,
-    youtube: <FaYoutube  color="#FF0033" size={36} />,
+    tiktok: <AiFillTikTok color="#101010" size={36} />,
+    instagram: <FaInstagramSquare color="#F5058D" size={36} />,
+    youtube: <FaYoutube color="#FF0033" size={36} />,
     line: <FaLine color="#00c300" size={35} />
   }), []);
 
@@ -164,7 +167,7 @@ export default function Page() {
   };
 
   return (
-    <div className="layout-container">
+    <div>
       {/* ToastContainer ต้องมีใน JSX เพื่อแสดง toast */}
       <ToastContainer
         position="top-center"
@@ -263,7 +266,9 @@ export default function Page() {
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-grid">
             {/* Select Topic */}
-            <label htmlFor="topic" className="form-label">{messages.selecttop} *</label>
+            <label htmlFor="topic" className="form-label">
+              {messages.selecttop} <span className="required-asterisk">*</span>
+            </label>
             <select id="topic" name="topic" value={formData.topic}
               onChange={handleChange}
               onBlur={() => setTouched(prev => ({ ...prev, topic: true }))}
@@ -276,7 +281,7 @@ export default function Page() {
             {touched.topic && errors.topic && <p className="error-text">*{errors.topic}</p>}
 
             {/* Name */}
-            <label className="form-label">{messages.namelast} *</label>
+            <label className="form-label">{messages.namelast} <span className="required-asterisk">*</span></label>
             <input type="text" name="name"
               value={formData.name}
               onChange={handleChange}
@@ -287,7 +292,7 @@ export default function Page() {
             {touched.name && errors.name && <p className="error-text">*{errors.name}</p>}
 
             {/* Phone */}
-            <label className="form-label">{messages.pnumber} *</label>
+            <label className="form-label">{messages.pnumber} <span className="required-asterisk">*</span></label>
             <input type="tel" name="phone"
               value={formData.phone}
               onChange={handleChange}
@@ -310,7 +315,7 @@ export default function Page() {
             {touched.email && errors.email && <p className="error-text">*{errors.email}</p>}
 
             {/* Message */}
-            <label className="form-label">ฝากข้อความ *</label>
+            <label className="form-label">ฝากข้อความ <span className="required-asterisk">*</span></label>
             <textarea name="message" rows={4}
               value={formData.message}
               onChange={handleChange}

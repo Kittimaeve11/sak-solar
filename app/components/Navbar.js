@@ -4,7 +4,7 @@ import React from 'react';
 import { useLocale } from '../Context/LocaleContext';
 import Link from 'next/link';
 import '../../styles/navbar.css';
-
+import { FaPhone } from 'react-icons/fa6';
 export default function Navbar() {
   const { messages, switchLocale, locale } = useLocale();
 
@@ -39,14 +39,19 @@ export default function Navbar() {
             ENG
           </span>
         </div>
-{/* ปุ่มติดต่อเรา */}
-      <Link href="/Contact/">
-        <button className="contactButton">{messages.contact}</button>
-      </Link>
-      
-    </div>
-   
+        {/* ปุ่มติดต่อเรา + โทร */}
+        <div className="contactActions">
+          <a href="tel:1487" className="callLink" title="โทร 1487">
+            <FaPhone className="phoneIcon" />
+            <span className="phoneNumber">1487</span>          </a>
+          <Link href="/Contact/">
+            <button className="contactButton">{messages.contact}</button>
+          </Link>
+        </div>
+
+      </div>
+
     </nav >
-    
+
   );
 }

@@ -1,59 +1,117 @@
 'use client';
 
-import React, { useState , useEffect} from 'react';
-import { useLocale } from '../Context/LocaleContext';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
+import { useLocale } from '../Context/LocaleContext';
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
+import { products } from '../data/products';
 import '../../styles/tabmenu.css';
 
 export default function TabMenu() {
   const { messages } = useLocale();
   const pathname = usePathname();
-  const [open, setOpen] = useState(false); // hamburger menu
-  const [serviceOpen, setServiceOpen] = useState(false); // dropdown serviceproduct
+  const [open, setOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false);
+  const [activeProductSlug, setActiveProductSlug] = useState(null);
+  const timeoutRef = useRef(null);
 
-  // ฟังก์ชันเช็ค active
   const isActive = (path) => path === '/' ? pathname === '/' : pathname.startsWith(path);
+  const isInProductsSection = pathname.startsWith('/Serviceproduct') || pathname.startsWith('/products/');
 
-  // ฟังก์ชันเปิด/ปิด dropdown ด้วยการคลิก
-  const toggleService = (e) => {
-    e.preventDefault(); // ป้องกันการไปหน้าใหม่ตอนคลิกลิงก์หลัก
-    setServiceOpen(!serviceOpen);
-  };
-   // เพิ่ม useEffect เพื่อตรวจจับการเปลี่ยนเส้นทาง
-   useEffect(() => {
-    setOpen(false);       // ปิด hamburger menu เมื่อเปลี่ยนหน้า
-    setServiceOpen(false); // ปิด dropdown serviceproduct เมื่อเปลี่ยนหน้า
+  useEffect(() => {
+    setOpen(false);
+    setServiceOpen(false);
+    setActiveProductSlug(null);
+    clearTimeout(timeoutRef.current);
   }, [pathname]);
 
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setServiceOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setServiceOpen(false);
+      setActiveProductSlug(null);
+    }, 200);
+  };
 
   return (
     <>
-      <button className="hamburger" onClick={() => setOpen(!open)}>☰</button>
-
+      <button className="hamburger" onClick={() => setOpen(!open)}><IoMenu /></button>
       <nav id="navmenu" className={`navmenu ${open ? 'active' : ''}`}>
         <ul className="nav-root">
           <li><Link href="/" className={isActive('/') ? 'active' : ''}>{messages.home}</Link></li>
 
-          <li className="dropdown">
-            {/* เปลี่ยนจาก Link ธรรมดาเป็นปุ่ม หรือ anchor ที่คลิกได้ */}
-            <a
-              href="/Serviceproduct"
-              onClick={toggleService}
-              className={isActive('/Serviceproduct') ? 'active' : ''}
-              role="button"
-              aria-expanded={serviceOpen}
-              aria-haspopup="true"
-            >
-              {messages.serviceproduct}
-            </a>
+          <li
+            className={`dropdown ${isInProductsSection ? 'active' : ''}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Link href="/Serviceproduct" legacyBehavior>
+              <a
+                onClick={(e) => {
+                  if (!serviceOpen) {
+                    e.preventDefault();
+                    setServiceOpen(true);
+                  }
+                }}
+                className={isInProductsSection ? 'active' : ''}
+                role="button"
+                aria-expanded={serviceOpen}
+                aria-haspopup="true"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '0px 0px',
+                }}
+              >
+                {messages.serviceproduct}
+                {serviceOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              </a>
+            </Link>
 
             {serviceOpen && (
-              <ul className="dropdown-menu">
-                <li><Link href="/Serviceproduct/product1">ผลิตภัณฑ์ 1</Link></li>
-                <li><Link href="/Serviceproduct/product2">ผลิตภัณฑ์ 2</Link></li>
-                <li><Link href="/Serviceproduct/product3">ผลิตภัณฑ์ 3</Link></li>
+              <ul className="dropdown-menu level-1">
+                {products.map((product) => {
+                  const isCurrentProductPage = pathname.startsWith(`/products/${product.slug}`);
+                  return (
+                    <li
+                      key={product.slug}
+                      className={`dropdown-item ${isCurrentProductPage ? 'active' : ''}`}
+                      onMouseEnter={() => setActiveProductSlug(product.slug)}
+                      onMouseLeave={() => setActiveProductSlug(null)}
+                    >
+                      <Link href={`/products/${product.slug}`} legacyBehavior>
+                        <a
+                          className={`dropdown-toggle ${activeProductSlug === product.slug ? 'hovered' : ''}`}
+                          style={{ cursor: 'pointer', padding: '15px 20px', display: 'block' }}
+                        >
+                          {product.name}
+                        </a>
+                      </Link>
+
+                      {activeProductSlug === product.slug && (
+                        <ul className="brand-submenu">
+                          {product.brands.map((brand) => (
+                            <li key={brand.slug}>
+                              <Link
+                                href={`/products/${product.slug}/${brand.slug}`}
+                                className={pathname === `/products/${product.slug}/${brand.slug}` ? 'active' : ''}
+                              >
+                                {brand.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </li>
@@ -62,6 +120,7 @@ export default function TabMenu() {
           <li><Link href="/Editorial" className={isActive('/Editorial') ? 'active' : ''}>{messages.editorial}</Link></li>
           <li><Link href="/Faq" className={isActive('/Faq') ? 'active' : ''}>{messages.faq}</Link></li>
           <li><Link href="/Success" className={isActive('/Success') ? 'active' : ''}>{messages.success}</Link></li>
+          <li><Link href="/About" className={isActive('/About') ? 'active' : ''}>{messages.about}</Link></li>
         </ul>
       </nav>
     </>

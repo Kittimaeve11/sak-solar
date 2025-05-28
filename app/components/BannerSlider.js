@@ -9,13 +9,12 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
 const banners = [
-  "/images/Bannerhome-1.jpg",
-  "/images/Bannerhome-2.jpg",
-  "/images/Bannerhome-3.jpg",
-  "/images/Bannerhome-4.jpg",
-  "/images/Bannerhome-5.jpg",
-  "/images/Bannerhome-6.jpg",
-];
+  { src: "/images/Bannerhome-1.jpg", href: "https://example.com/link1" },
+  { src: "/images/Bannerhome-2.jpg", href: "https://example.com/link2" },
+  { src: "/images/Bannerhome-3.jpg", href: "https://example.com/link3" },
+  { src: "/images/Bannerhome-4.jpg", href: "https://example.com/link4" },
+  { src: "/images/Bannerhome-5.jpg", href: "https://example.com/link5" },
+  { src: "/images/Bannerhome-6.jpg", href: "https://example.com/link6" },];
 
 // ลูกศรซ้าย
 function PrevArrow(props) {
@@ -32,7 +31,7 @@ function PrevArrow(props) {
         left: 10,
         transform: "translate(0, -50%)",
         zIndex: 10,
-        background: "rgba(0,0,0,0.4)",
+        // background: "rgba(0,0,0,0.4)",
         borderRadius: "50%",
         width: 36,
         height: 36,
@@ -60,7 +59,7 @@ function NextArrow(props) {
         right: 10,
         transform: "translate(0, -50%)",
         zIndex: 10,
-        background: "rgba(0,0,0,0.4)",
+        // background: "rgba(0,0,0,0.4)",
         borderRadius: "50%",
         width: 36,
         height: 36,
@@ -81,7 +80,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 3000,
   arrows: true,  // เปิดลูกศร
   rtl: false,
   prevArrow: <PrevArrow />,
@@ -93,16 +92,18 @@ export default function BannerSlider() {
   return (
     <div className="w-full overflow-hidden">
       <Slider {...settings}>
-        {banners.map((src, index) => (
+        {banners.map(({ src, href }, index) => (
           <div key={index} className="w-full">
-            <Image
-              src={src}
-              alt={`Banner ${index + 1}`}
-              width={1600}
-              height={450}
-              style={{ width: "100%", height: "auto" }}
-              priority={index === 0}
-            />
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              <Image
+                src={src}
+                alt={`Banner ${index + 1}`}
+                width={1600}
+                height={450}
+                style={{ width: "100%", height: "auto" }}
+                priority={index === 0}
+              />
+            </a>
           </div>
         ))}
       </Slider>

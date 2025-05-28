@@ -1,10 +1,9 @@
 {
   "/api/data/route": "app/api/data/route.js",
-  "/page": "app/page.js",
-  "/Editorial/page": "app/Editorial/page.js",
-  "/Faq/page": "app/Faq/page.js",
-  "/Search/page": "app/Search/page.js",
-  "/Success/page": "app/Success/page.js",
   "/Contact/page": "app/Contact/page.js",
+  "/Editorial/page": "app/Editorial/page.js",
+  "/Serviceproduct/page": "app/Serviceproduct/page.js",
+  "/Success/page": "app/Success/page.js",
+  "/Search/page": "app/Search/page.js",
   "/_not-found/page": "app/_not-found/page.js"
 }

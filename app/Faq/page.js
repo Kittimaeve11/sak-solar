@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <div>
       <main style={{ padding: '1rem' }}>
-        <h1>{messages.search}</h1>
+        <h1>{messages.faq}</h1>
       </main>
     </div>
   );

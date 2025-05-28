@@ -22,29 +22,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/data/route.js"
     ],
-    "/Editorial/page": [
+    "/About/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/Editorial/page.css",
-      "static/chunks/app/Editorial/page.js"
-    ],
-    "/Faq/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Faq/page.css",
-      "static/chunks/app/Faq/page.js"
-    ],
-    "/Search/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Search/page.css",
-      "static/chunks/app/Search/page.js"
-    ],
-    "/Success/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Success/page.css",
-      "static/chunks/app/Success/page.js"
+      "static/css/app/About/page.css",
+      "static/chunks/app/About/page.js"
     ],
     "/Contact/page": [
       "static/chunks/webpack.js",
@@ -56,6 +38,30 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/_not-found/page.js"
+    ],
+    "/Serviceproduct/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/Serviceproduct/page.css",
+      "static/chunks/app/Serviceproduct/page.js"
+    ],
+    "/Editorial/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/Editorial/page.css",
+      "static/chunks/app/Editorial/page.js"
+    ],
+    "/Success/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/Success/page.css",
+      "static/chunks/app/Success/page.js"
+    ],
+    "/Search/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/Search/page.css",
+      "static/chunks/app/Search/page.js"
     ]
   }
 }

@@ -13,16 +13,16 @@
   flex-direction: column; /* แนวตั้ง (จากบนลงล่าง) */
   align-items: center; /* จัดกึ่งกลางแนวนอน */
   max-width: 240px; /* กำหนดความกว้างสูงสุด */
-  margin: 0 10px;  /* ระยะห่างซ้าย-ขวา */
+  margin: 0 10px; /* ระยะห่างซ้าย-ขวา */
 }
 /* ชื่อไเติ้ล ช่องทางสาอบถามเพิ่มเติม */
 .social-title {
-    margin-bottom: 0px; /* เพิ่มระยะห่างจากไอคอนด้านล่าง  */
-  }
-  /* ไอคอนสีส้ม */
+  margin-bottom: 0px; /* เพิ่มระยะห่างจากไอคอนด้านล่าง  */
+}
+/* ไอคอนสีส้ม */
 /* ข้อความอธิบายใต้ไอคอน */
-.contact-text{
-  color: #102E50;
+.contact-text {
+  color: #102e50;
   margin: 0px 0; /* ลดช่องว่างด้านบนและล่าง */
   margin-top: 0;
   line-height: 1.5; /* ลดความสูงของบรรทัด */
@@ -38,8 +38,7 @@
   padding-left: 10px;
   padding-right: 20px;
 }
-กำหนดให้แค่ของฝากข้อความ */
-.message-label,
+กำหนดให้แค่ของฝากข้อความ */ .message-label,
 .message-textarea {
   align-self: start; /* ชิดบนใน grid cell */
 }
@@ -48,7 +47,6 @@
   color: #005bac;
   font-size: 18px;
   font-weight: 400; /* ใช้ Thin */
-
 }
 
 /* สไตล์ช่อง input, textarea และ select */
@@ -69,38 +67,33 @@ select.form-input {
   resize: vertical;
 }
 
-
-
-
-
 .placeholder-gray {
-  color: #7E7C7A !important;
+  color: #7e7c7a !important;
 }
 
 .input-filled {
-  color: #102E50 !important;
+  color: #102e50 !important;
 }
 /* สีข้อความ placeholder */
 .form-input {
-  color: #7E7C7A;
+  color: #7e7c7a;
 }
-
 
 /* เมื่อมีการเลือก option แล้ว */
 .form-input:focus {
-  color: #102E50;
+  color: #102e50;
 }
 
 /* หากเลือกหัวข้อแล้ว ไม่ใช่ค่าเริ่มต้น */
 .form-input option:not(:first-child) {
-  color: #102E50;
+  color: #102e50;
 }
 
 /* ✅ ข้อความ error ใต้ input */
 .error-text {
   color: red;
   font-size: 16px;
-  margin-top: -4px;         /* ดึงชิดขึ้น */
+  margin-top: -4px; /* ดึงชิดขึ้น */
   margin-left: 4px;
   margin-bottom: 10px;
   line-height: 1.2;
@@ -111,10 +104,10 @@ select.form-input {
 
 .centeredText {
   text-align: center;
-  color: #19489D;
+  color: #19489d;
   font-weight: 400;
   font-size: 40px;
-  margin-top: 1rem;    /* ระยะห่างบน */
+  margin-top: 1rem; /* ระยะห่างบน */
   margin-bottom: 1rem; /* ระยะห่างล่างมาก */
 }
 /*กล่องฟอร์มติดต่อ*/
@@ -154,7 +147,7 @@ select.form-input {
   border-radius: 8px;
   padding: 10px 16px;
   font-size: 18px;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-weight: 400;
   display: inline-flex;
   align-items: center;
@@ -162,9 +155,7 @@ select.form-input {
   gap: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
- 
 }
-
 
 /* ปุ่มสีส้ม ส่งข้อความ*/
 .btn-orange {
@@ -187,38 +178,34 @@ select.form-input {
 .form-input:focus,
 .form-textarea:focus,
 select.form-input:focus {
-  border-color: #608BC1;        /* สีเส้นขอบเมื่อโฟกัส */
-  outline: none;                /* ลบกรอบ default browser */
-  box-shadow:
-    0 0 2px rgba(0, 91, 172, 0.1),
-    0 0 6px rgba(0, 91, 172, 0.15),
+  border-color: #608bc1; /* สีเส้นขอบเมื่อโฟกัส */
+  outline: none; /* ลบกรอบ default browser */
+  box-shadow: 0 0 2px rgba(0, 91, 172, 0.1), 0 0 6px rgba(0, 91, 172, 0.15),
     0 0 10px rgba(0, 91, 172, 0.1);
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .placeholder-gray {
-  color: #7E7C7A !important;
+  color: #7e7c7a !important;
 }
 
 .input-filled {
-  color: #102E50 !important;
+  color: #102e50 !important;
 }
 /* สีข้อความ placeholder */
 .form-input {
-  color: #7E7C7A;
+  color: #7e7c7a;
 }
-
-
 
 /* หากเลือกหัวข้อแล้ว ไม่ใช่ค่าเริ่มต้น */
 .form-input option:not(:first-child) {
-  color: #102E50;
+  color: #102e50;
 }
 
 /* ✅ ข้อความ error ใต้ input */
 .error-text {
   color: red;
   font-size: 16px;
-  margin-top: -4px;         /* ดึงชิดขึ้น */
+  margin-top: -4px; /* ดึงชิดขึ้น */
   margin-left: 4px;
   margin-bottom: 10px;
   line-height: 1.2;
@@ -244,8 +231,8 @@ select.form-input:focus {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
-
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
 .contactWrapper {
   display: flex;
@@ -274,11 +261,11 @@ select.form-input:focus {
   max-width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .companyName {
-  color: #19489D;
+  color: #19489d;
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -313,7 +300,8 @@ select.form-input:focus {
   height: 300px;
   border: 0;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 .companyName {
   text-align: left;
   font-size: 2rem;
@@ -354,7 +342,7 @@ select.form-input:focus {
 /* เฟสไลน์ */
 .socialItem {
   display: flex;
-  align-items: center;   
+  align-items: center;
   font-size: 1.1rem;
   color: #000;
   text-decoration: none;
@@ -364,19 +352,19 @@ select.form-input:focus {
 .icon {
   margin-right: 0.75rem;
   font-size: 1.4rem;
-  display: flex;            
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .label {
   font-weight: 300;
-  line-height: 1.4;        
+  line-height: 1.4;
 }
 
 /* ช่องทางการติดต่อ */
 .communicationName {
-  color: #19489D;
+  color: #19489d;
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -392,13 +380,14 @@ select.form-input:focus {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-}.gridItem {
+}
+.gridItem {
   padding: 1rem;
 }
 .companyInfo,
 .googleMapWrapper {
   grid-column: 1;
-  border-radius: 16px; 
+  border-radius: 16px;
   overflow: hidden;
 }
 .companyImage {
@@ -406,16 +395,22 @@ select.form-input:focus {
   max-width: 500px; /* ✅ จำกัดขนาดกว้างสุดของรูป */
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .companyImageWrapper,
 .socialSection {
   grid-column: 2;
 }
-@media (max-width: 768px) {
+.required-asterisk {
+  color: rgb(236, 3, 3);
+}
+
+@media (max-width: 600px) {
   .contactGrid {
     grid-template-columns: 1fr;
+    padding: 1rem 1rem;
+    row-gap: 1.5rem;
   }
 
   .companyInfo,
@@ -424,10 +419,58 @@ select.form-input:focus {
   .socialSection {
     grid-column: 1;
   }
-}
-.noUnderline {
-  color: #000;
-  text-decoration: none;
+
+  .companyImage {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .googleMap {
+    width: 100%;
+    height: 250px;
+    margin-top: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* เปลี่ยนจาก 2 คอลัมน์เป็น 1 */
+    row-gap:0.8rem;
+  }
+
+  .form-submit {
+    align-items: center;
+  }
+
+  .form-button {
+    align-items: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .contact-box {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .centeredText {
+    font-size: 28px; /* ลดขนาดตัวอักษรให้พอดีกับมือถือ */
+  }
+
+  .companyName,
+  .communicationName {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .socialItem {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+  }
 }
 .banner-container {
   width: 100%;
@@ -443,7 +486,3 @@ select.form-input:focus {
   height: 100%;
   object-fit: cover;
 }
-
-
-
-
