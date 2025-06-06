@@ -1,10 +1,11 @@
 // app/layout.js
 import { Kanit } from 'next/font/google'
 import { LocaleProvider } from './Context/LocaleContext';
-import Navbar from './components/Navbar';
+import Navbartest from './components/Navbartest';
 import TabMenu from './components/TabMenu';
 import Footer from './components/Footer';
 import './globals.css';
+import CookieBanner from './components/CookieBanner';
 
 const kanit = Kanit({
   subsets: ['thai'],
@@ -25,9 +26,10 @@ export default function RootLayout({ children }) {
     <html lang="th" className={kanit.className}>
       <body>
         <LocaleProvider>
-          <Navbar />
+          <Navbartest />
           <TabMenu />
-            <main>{children}</main>    
+            <main>{children}</main>   
+          <CookieBanner /> 
           <Footer />
         </LocaleProvider>
       </body>

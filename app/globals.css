@@ -11,7 +11,7 @@
   font-weight: 300;
 }
 
-:root {
+/* :root {
   --nav-color: #102e50;
   --nav-hover-color: gray;
   --accent-color: #e78b48;
@@ -22,7 +22,7 @@
   --nav-mobile-background-color: #fff;
   --default-color: #000;
   --contrast-color: #fff;
-}
+} */
 
 body {
   margin: 0;

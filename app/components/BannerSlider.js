@@ -9,6 +9,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
 const banners = [
+  { src: "/images/test.jpg", href: "https://example.com/link1" },
   { src: "/images/Bannerhome-1.jpg", href: "https://example.com/link1" },
   { src: "/images/Bannerhome-2.jpg", href: "https://example.com/link2" },
   { src: "/images/Bannerhome-3.jpg", href: "https://example.com/link3" },

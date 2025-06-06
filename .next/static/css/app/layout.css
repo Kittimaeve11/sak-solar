@@ -1,14 +1,251 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./styles/CookieBanner.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+
+.CookieBanner_banner__dO24M {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    font-family: "Kanit", sans-serif, Arial, sans-serif;
+    color: #333;
+    z-index: 1200;
+  }
+  
+  .CookieBanner_content__QPB2P {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .CookieBanner_title__AZ2_B {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1 1 100%;
+  }
+  
+  .CookieBanner_description__WO5ZI {
+    font-size: 1rem;
+    line-height: 1.5;
+    flex: 1 1 60%;
+    margin: 0;
+  }
+  
+  .CookieBanner_link__47dg7 {
+    color: #1a73e8;
+    text-decoration: underline;
+  }
+  
+  .CookieBanner_link__47dg7:hover,
+  .CookieBanner_link__47dg7:focus {
+    color: #155ab6;
+    outline: none;
+  }
+  
+  .CookieBanner_actions__pGYey {
+    display: flex;
+    gap: 1rem;
+    flex: 1 1 35%;
+    justify-content: flex-end;
+  }
+  
+  .CookieBanner_btnPrimary__Aw_EX {
+    background-color: #0b5ed7;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .CookieBanner_btnPrimary__Aw_EX:hover,
+  .CookieBanner_btnPrimary__Aw_EX:focus {
+    background-color: #084cbc;
+    outline: none;
+  }
+  
+  .CookieBanner_btnSecondary__ZEY6v {
+    background-color: transparent;
+    border: 2px solid #0b5ed7;
+    color: #0b5ed7;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .CookieBanner_btnSecondary__ZEY6v:hover,
+  .CookieBanner_btnSecondary__ZEY6v:focus {
+    background-color: #0b5ed7;
+    color: white;
+    outline: none;
+  }
+  /* เพิ่มส่วนของ modal overlay และ modal box */
+  .CookieBanner_modalOverlay__KfNqi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1300;
+    padding: 1rem;
+  }
+  
+  .CookieBanner_modal__pO1XE {
+    background: white;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    color: #333;
+  }
+  
+  .CookieBanner_fieldset__l3GwZ {
+    border: none;
+    margin-bottom: 1.25rem;
+  }
+  
+  .CookieBanner_checkboxLabel__jAXu7 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    color: #222;
+  }
+  
+  .CookieBanner_checkboxLabel__jAXu7 input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    cursor: pointer;
+  }
+  
+  .CookieBanner_actions__pGYey {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* ปุ่มเหมือนเดิม */
+  .CookieBanner_btnPrimary__Aw_EX {
+    background-color: #0b5ed7;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .CookieBanner_btnPrimary__Aw_EX:hover,
+  .CookieBanner_btnPrimary__Aw_EX:focus {
+    background-color: #084cbc;
+    outline: none;
+  }
+  
+  .CookieBanner_btnSecondary__ZEY6v {
+    background-color: transparent;
+    border: 2px solid #0b5ed7;
+    color: #0b5ed7;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .CookieBanner_btnSecondary__ZEY6v:hover,
+  .CookieBanner_btnSecondary__ZEY6v:focus {
+    background-color: #0b5ed7;
+    color: white;
+    outline: none;
+  }
+.CookieBanner_cookieRow__GJk7r {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f7fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .CookieBanner_cookieRow__GJk7r:hover {
+    background-color: #e9eff5;
+  }
+  
+  .CookieBanner_cookieLabel__mmNEd {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #222;
+    flex: 1;
+    padding-right: 1rem;
+  }
+  
+  .CookieBanner_cookieToggle___S7GT {
+    flex-shrink: 0;
+  }
+  
+  /* สำหรับ modal หัวข้อและข้อความ */
+  .CookieBanner_modal__pO1XE h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .CookieBanner_modal__pO1XE p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  
+  /* ปุ่มด้านล่างของ modal */
+  .CookieBanner_modal__pO1XE .CookieBanner_actions__pGYey {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./styles/Footer.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
 .Footer_footer__yl3k1 {
   width: 100%;
-  background-color: #2c2e31;
+  background-image: url("/images/footer-copy.jpg");
+  background-size: cover;
+  background-position: center calc(50px); /* หรือ center calc(100% - 50px); */
+  background-repeat: no-repeat;
   color: white;
   font-size: 14px;
-  padding: 1rem 0;
-  margin: 1;
+  padding: 2rem 0 0 0;
   box-sizing: border-box;
+  min-height: 520px; /* ปรับตามความสูงเนื้อหา + footerBottomWrapper */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Footer_footerContent__B4teV {
@@ -50,31 +287,32 @@
   gap: 10px;
 }
 
+/* ไม่ใส่พื้นหลังซ้ำ ให้ background ของ footer เห็นได้ต่อเนื่อง */
+.Footer_footerBottomWrapper__Ipvgi {
+  min-height: 0px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* เพื่อความชัดเจนและอ่านง่าย */
 .Footer_footerBottom__5n19l {
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
-  color: #ececec;
-  min-height: 60px;
-  padding: 0 1rem;
-  line-height: 1;
   flex-wrap: wrap;
-  gap: 10px;
-  text-align: center;}
-.Footer_footerBottomWrapper__Ipvgi {
-  width: 100%; /* ถ้าต้องการให้เต็มหน้าจอแน่นอน */
-  min-height:70px; 
-  background-color: rgb(32, 31, 39);
-  border-top: 2px solid #444444;
+  color: #243865;
+  z-index: 1;
 }
 .Footer_footerContent__B4teV {
   max-width: 1200px;
   margin: 0 auto; /* กึ่งกลาง */
-  width: 100%;    /* เต็มความกว้างบนหน้าจอเล็ก */
-  padding: 0 1rem; /* เว้นขอบซ้ายขวานิดหน่อย */}
+  width: 100%; /* เต็มความกว้างบนหน้าจอเล็ก */
+  padding: 0 1rem; /* เว้นขอบซ้ายขวานิดหน่อย */
+}
 .Footer_footerBottomContainer__qqZN6 {
   width: 100%;
   background-color: rgb(32, 31, 39);
@@ -92,13 +330,14 @@
 }
 
 .Footer_logoGroup__8LRp2 {
-display: flex;
+  display: flex;
   gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   height: auto;
-  width: auto;}
+  width: auto;
+}
 .Footer_logoGroup__8LRp2 img {
   width: 45px; /* ปรับขนาดตามที่ต้องการ */
   height: auto;
@@ -144,215 +383,521 @@ display: flex;
   }
 }
 
-/*!***************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./styles/navbar.css ***!
-  \***************************************************************************************************************************************************************************************************************************************************************/
-  .navbar {
-    width: calc(100% - 20px); /* ลดความกว้าง 20px (ซ้าย+ขวา = 10px+10px) */
-    margin: 0 auto;            /* กึ่งกลาง */
-    padding: 0.5rem 5rem; /*เว้นขอบซ้าย-ขวาให้ห่างขึ้น */
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
-     border-bottom: 2px solid #CBDCEB;
-    position: relative; /* ต้องมีสำหรับ ::after */
-  }
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./styles/Navbar.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.Navbar_navWrapper__uiFgw {
+  position: relative;
+  background: #ffffff;
+}
 
-  /* กลุ่มโลโก้ + ชื่อบริษัท */
-  .logoTitleGroup {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
+.Navbar_navbar__zhZYq {
+  /* width: calc(100% - 50px); ลดความกว้าง 20px (ซ้าย+ขวา = 10px+10px) */
+  /* margin: 0 auto; กึ่งกลาง */
+  /* padding: 0.5rem 5rem; เว้นขอบซ้าย-ขวาให้ห่างขึ้น */
+  /* max-width: 1200px;       กำหนดความกว้างสูงสุดของ navbar */
+  margin: 0 auto; /* ทำให้อยู่กึ่งกลางจอ */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 150px;
+  position: relative;
+  z-index: 2;
+}
 
-  .logoTitleGroup img {
-    height: 80px;
-  }
+.Navbar_leftSection__mzVce {
+  display: flex;
+  align-items: center;
+}
 
-  /* ข้อความบริษัท */
-  .companyName h1 {
-    font-size: 23px;
-    margin: 0;
-    color: #11325a;
-    font-weight: 400; /*ตัวไม่หนา */
-  }
+.Navbar_companyName__RvG7s {
+  margin-left: 15px;
+}
 
-  .companyName h3 {
-    font-size: 18px;
-    margin: 0;
-    color: #11325a;
-    font-weight: normal;
-  }
+/* .thai {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-  /* กลุ่มปุ่มภาษา + ติดต่อเรา */
-  .localeContactGroup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;        /* กึ่งกลางแนวนอน */
-    justify-content: center;    /* กึ่งกลางแนวตั้ง */
-    gap: 0.5rem;
-  }
-  
+.eng {
+  font-size: 14px;
+  color: #ccc;
+}
 
-  /* ปุ่มภาษา */
-  .localeButtons {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: #CBDCEB;
-    user-select: none;
-    gap: 0rem; /* เพิ่มช่องว่างระหว่างภาษา */
-    margin: 0px 8px;
-    margin-left: auto;
-  }
+.rightSection {
+  text-align: right;
+  color: black;
+}
 
-  .localeItem {
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-    font-weight: 400 !important; /* ใช้ Thin */
+.lang {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
 
-  }
+.hotline {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0056b3;
+  margin: 5px 0;
+} */
 
-  .localeItem.disabled {
-    color: #608BC1;
-    pointer-events: none;
-  }
+/* 
+.links a {
+  text-decoration: none;
+  color: black;
+  margin: 0 5px;
+}
 
-  .separator {
-    width: 0rem;
+.links a:hover {
+  text-decoration: underline;
+} */
+
+/* 🔷 Yellow Triangle Section (simulate diagonal cut) */
+.Navbar_navWrapper__uiFgw::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 480.5px; /* คงที่หรือ responsive ได้ */
+  height: 100%;
+  background-color: #f87f0b;
+  clip-path: polygon(100px 0, 100% 0%, 100% 100%, 0% 100%);
+  z-index: 1;
+}
+
+/* 🔶 Yellow bottom line */
+.Navbar_navWrapper__uiFgw::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 9.5px;
+  width: 100%;
+  background-color: #f87f0b;
+  z-index: 3;
+}
+.Navbar_leftSection__mzVce {
+  display: flex;
+  align-items: center; /* ✅ กึ่งกลางแนวตั้ง */
+  gap: 16px;
+}
+
+.Navbar_logoContainer__OcSOc {
+  position: relative;
+  width: 450px;
+  height: 90px;
+  display: flex;
+  align-items: center; /* ✅ กึ่งกลางแนวตั้งใน logoContainer */
+  justify-content: center; /* เฉพาะถ้าคุณต้องการให้รูปภาพอยู่กลาง container */
+}
+
+.Navbar_logoImage__oC6bF {
+  height: 100%;
+  max-height: 80px;
+  padding: 0;
+  object-fit: contain;
+  display: block;
+}
+/* กลุ่มปุ่มภาษา + เกี่ยวกับเรา + ติดต่อเรา */
+.Navbar_localeContactGroup__ZQsRf {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* กึ่งกลางแนวนอน */
+  justify-content: flex-end; /* กึ่งกลางแนวตั้ง */
+  /* gap: 0.5rem; */
+  text-align: center;
+}
+
+/* ปุ่มภาษา */
+.Navbar_localeButtons__uWi1h {
+  display: flex;
+  justify-content: flex-end; /* เปลี่ยนจาก center เป็นขวา */
+  gap: 0px; /* หรือ margin ตามต้องการ */
+}
+.Navbar_localeItem__fL0Lv {
+  cursor: pointer;
+}
+
+.Navbar_localeDivider__DhFqi {
+  margin: 0 5px; /* เพิ่มช่องว่างซ้าย-ขวา */
+}
+.Navbar_localeButtons__uWi1h > * {
+  position: relative;
+  display: inline-block;
+  color: #ffffffbb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Navbar_localeButtons__uWi1h > *:hover {
+  background-image: linear-gradient(120deg, #ffffff, #243865, #ffffff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: Navbar_shine__v0cyG 3s linear infinite;
+}
+
+@keyframes Navbar_shine__v0cyG {
+  0% {
+    background-position: -200% center;
   }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.Navbar_localeItem__fL0Lv {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  font-weight: 400 !important; /* ใช้ Thin */
+}
+
+.Navbar_localeItem__fL0Lv.Navbar_disabled__9ZQt3 {
+  color: #0d3973;
+  pointer-events: none;
+}
+
+.Navbar_separator__vUmbD {
+  width: 0rem;
+}
+.Navbar_separatorone__Q63Db {
+  width: 0rem;
+}
+
 /* เส้นตรงกลางปุ่มเปลี่ยนภาษา */
-  .separator {
-    border-left: 1.8px solid #133E87;
-    height: 18px;
-    margin: 0 8px;
-  }
+/* .separator {
+  border-left: 1.8px solid #0d3973;
+  height: 16px;
+  margin: 0 8px;
+} */
+/* เส้นตรงกลาง เกี่ยวกับเรา ติดต่อเรา */
+/* .separatorone {
+  border-left: 1.8px solid #ffffff;
+  height: 16px;
+  margin: 0 8px;
+} */
 
-  /* ปุ่มติดต่อเรา */
-  .contactButton {
-    background-color: #5c83b6;
-    border: none;
-    border-radius: 6px;
-    padding: 9px 12px;
-    color: white;
-    font-weight: 400;
-    cursor: pointer;
-    font-size: 14px;
-    user-select: none;
-    transition: background-color 0.2s;
-  }
-
-  .contactButton:hover {
-    background-color: #486594;
-  }
-  .contactActions {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  /* ปุ่มโทรศัพท์ */
-  .callLink {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #608BC1; /* สีฟ้าอ่อน */
-    font-size: 16px;
-    font-weight: 500;
-    gap: 6px;
-  }
-  
-  .phoneIcon {
-    font-size: 20px;
-    color: #608BC1; /* สีเดียวกับตัวเลข */
-  }
-  
-  .phoneNumber {
-    color: #608BC1;
-    font-size: 25px;
-    font-weight: 600; /* ใช้ Thin */
-
-  }
-    
-/* ========== เดสก์ท็อปหน้าจอแคบ (ไม่ให้ h1/h3 ตกบรรทัด) ========== */
-@media (max-width: 1280px) {
-  .companyName {
-    white-space: nowrap; /* ไม่ให้ตัดบรรทัด */
-    overflow: hidden;
-    text-overflow: ellipsis; /* ถ้ายาวเกินให้ ... */
-    max-width: 400px; /* ปรับตามพื้นที่ที่เหลือ */
-  }
-
-  .companyName h1 {
-    font-size: 20px;
-  }
-
-  .companyName h3 {
-    font-size: 16px;
-  }
-
-  .logoTitleGroup img {
-    height: 70px;
-  }
-
-  .navbar {
-    padding: 0.5rem 2rem;
-  }
+.Navbar_contactActions__jGoPz {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 🔹 จัดกึ่งกลางแนวนอน */
+  justify-content: center; /* 🔹 จัดกึ่งกลางแนวตั้ง (หาก container สูง) */
+  text-align: center;
+}
+.Navbar_callLink__IINig {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #243865;
+  font-weight: bold;
+  font-size: 30px;
 }
 
-/* ========== มุมมองมือถือ ========== */
-@media (max-width: 600px) {
-  .navbar {
-    padding: 0.5rem 1rem;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.Navbar_phoneIcon__sDZeS {
+  margin-right: 6px;
+  font-size: 24px;
+}
+
+.Navbar_phoneNumber__j_L3L {
+  font-weight: bold;
+}
+
+/* ปุ่มติดต่อเรา + เกี่ยวกับเรา */
+.Navbar_contact__Y66rf {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+  padding-bottom: 0px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease;
+}
+
+/* .contact:hover {
+  background-image: linear-gradient(120deg, #ffffff, #243765ad, #ffffff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+} */
+
+.Navbar_contact__Y66rf:hover { 
+  /* background-color: #11377c;*/
+  color: #11377c;
+}
+
+
+.Navbar_contact__Y66rf.Navbar_active__v_AMp {
+  /* background-color: #f87f0b; */
+  color: #11377c;
+  /* border-bottom: 2px solid white; */
+}
+@media (max-width: 1200px) {
+  .Navbar_navbar__zhZYq {
+    padding: 10px 80px; /* ลดระยะห่างด้านข้างลง */
   }
 
-  .logoTitleGroup {
-    gap: 0.5rem;
+
+  .Navbar_logoContainer__OcSOc {
+    width: 450px; /* ปรับขนาดโลโก้เล็กลงตามจอ */
+  }
+}
+.Navbar_contactLinkGroup___RGrN {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+@media (max-width: 991px) {
+  .Navbar_navbar__zhZYq {
+    padding: 0px 0px 47px 90px; /* เพิ่ม padding-bottom ให้สูงพอ */
+    position: relative;
+    z-index: 2;
   }
 
-  .logoTitleGroup img {
+  .Navbar_navWrapper__uiFgw {
+    position: relative;
+    background: #ffffff;
+    z-index: 0;
+  }
+
+  /* 🔶 พื้นหลังสีส้มด้านล่าง ไม่เปลี่ยนแปลง */
+  .Navbar_navWrapper__uiFgw::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
     height: 50px;
+    width: 100%;
+    background-color: #f87f0b;
+    z-index: 0;
   }
 
-  .companyName h1 {
-    font-size: 16px;
+  /* 🔷 พื้นหลังสามเหลี่ยมด้านขวา */
+  .Navbar_navWrapper__uiFgw::after {
+    width: 200px;
+    clip-path: polygon(100px 0, 100% 0%, 100% 100%, 0% 100%);
+    transition: width 0.3s ease, clip-path 0.3s ease;
+  }
+  .Navbar_logoContainer__OcSOc {
+    position: relative;
+    width: 450px; /* ขนาดเริ่มต้น */
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* ชิดซ้าย */
+    padding-left: 20px; /* เว้นช่องว่างซ้ายไว้ */
+    z-index: 3; /* เหนือเส้น */
+    transition: width 0.3s ease, padding-left 0.3s ease;
   }
 
-  .companyName h3 {
-    font-size: 12px;
+  .Navbar_logoImage__oC6bF {
+    max-height: 80px; /* ไม่เลยเส้นสีส้ม */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    transition: max-height 0.3s ease, width 0.3s ease;
   }
 
-  /* ซ่อนข้อความชื่อบริษัทเมื่อหน้าจอแคบมาก */
-  @media (max-width: 480px) {
-    .companyName h1,
-    .companyName h3 {
-      display: none;
-    }
-  }
-
-  .localeContactGroup {
+  /* กลุ่มปุ่มและเมนู */
+  .Navbar_localeContactGroup__ZQsRf {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 0.25rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
   }
 
-  .localeButtons {
+  .Navbar_localeItem__fL0Lv {
     font-size: 14px;
   }
 
-  .contactButton {
-    padding: 6px 10px;
-    font-size: 12px;
+  .Navbar_localeButtons__uWi1h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 13px;
+    margin-bottom: 2px;
   }
 
-  .separator {
-    height: 16px;
-    margin: 0 4px;
+  .Navbar_contact__Y66rf {
+    font-size: 14px;
+  }
+
+  .Navbar_contactActions__jGoPz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 19px;
+    margin-top: 2px;
+  }
+
+  .Navbar_phoneIcon__sDZeS,
+  .Navbar_phoneNumber__j_L3L {
+    display: none;
   }
 }
+
+/* ย่อขนาดและเลื่อนตำแหน่งตามจอเล็กลง */
+
+/* <= 800px */@media (max-width: 800px) {
+  .Navbar_logoContainer__OcSOc {
+    width: clamp(250px, 60vw, 500px);
+    padding-left: clamp(0px, 3vw, 20px);
+    transition: width 0.4s ease, padding-left 0.4s ease;
+  }
+
+  .Navbar_logoImage__oC6bF {
+    max-height: clamp(200px, 50vw, 400px);
+    transition: max-height 0.4s ease;
+  }
+
+  .Navbar_navWrapper__uiFgw::after {
+    width: clamp(180px, 25vw, 230px);
+    clip-path: polygon(90px 0, 100% 0%, 100% 100%, 0% 100%);
+    transition: width 0.4s ease;
+  }
+
+  .Navbar_navbar__zhZYq {
+    padding: 0px clamp(10px, 3vw, 50px) 47px clamp(10px, 4vw, 50px);
+    transition: padding 0.4s ease;
+  }
+}
+
+@media (max-width: 600px) {
+  .Navbar_logoContainer__OcSOc {
+    width: clamp(180px, 90vw, 380px);
+    padding-left: clamp(5px, 2vw, 15px);
+  }
+
+  .Navbar_navWrapper__uiFgw::after {
+    width: clamp(180px, 22vw, 130px);
+    clip-path: polygon(90px 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+@media (max-width: 518px) {
+  .Navbar_logoContainer__OcSOc {
+    width: clamp(180px, 90vw, 380px);
+    padding-left: clamp(5px, 2vw, 15px);
+  }
+
+  .Navbar_navWrapper__uiFgw::after {
+    width: clamp(150px, 22vw, 130px);
+    clip-path: polygon(90px 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+@media (max-width: 495px) {
+  .Navbar_logoContainer__OcSOc {
+    width: clamp(160px, 85vw, 350px);
+  }
+
+  .Navbar_logoImage__oC6bF {
+    max-height: clamp(80px, 90vw, 300px);
+  }
+
+  .Navbar_navWrapper__uiFgw::after {
+    width: clamp(150px, 20vw, 110px);
+    clip-path: polygon(90px 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@media (max-width: 459px) {
+  .Navbar_navbar__zhZYq {
+    padding: 0px 0px 47px 20px;
+  }
+
+  .Navbar_logoContainer__OcSOc {
+    width: clamp(160px, 80vw, 330px);
+  }
+
+  .Navbar_navWrapper__uiFgw::after {
+    width: clamp(130px, 20vw, 110px);
+    clip-path: polygon(90px 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@media (max-width: 400px) {
+  .Navbar_navbar__zhZYq {
+    padding: 10px clamp(5px, 2vw, 20px) 47px clamp(0px, 1vw, 15px); /* เพิ่ม padding-top ให้ลงมา */
+    transition: padding 0.4s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .Navbar_logoContainer__OcSOc {
+    width: clamp(180px, 80vw, 400px);
+    max-width: 400px;
+    padding-left: clamp(5px, 2vw, 15px);
+    display: flex;
+    align-items: center;
+    /* ถ้าต้องการเลื่อนลงอีก */
+    margin-top: 10px;  /* ปรับเพิ่ม-ลดได้ตามชอบ */
+    transition: margin-top 0.4s ease;
+  }
+
+  .Navbar_logoImage__oC6bF {
+    max-height: clamp(70px, 22vw, 200px);
+    width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .Navbar_navWrapper__uiFgw::after {
+    width: clamp(100px, 22vw, 130px);
+    clip-path: polygon(80px 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@media (max-width: 319px) {
+  .Navbar_navbar__zhZYq {
+    display: flex;
+    align-items: center;
+    padding-top: 10px; /* เพิ่ม padding-top เล็กน้อย */
+  }
+
+  .Navbar_logoContainer__OcSOc {
+    width: clamp(10px, 90vw, 350px);
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* เพิ่ม margin-top */
+    transition: margin-top 0.4s ease;
+  }
+
+  .Navbar_logoImage__oC6bF {
+    max-height: clamp(10px, 25vw, 250px);
+    display: block;
+  }
+
+  .Navbar_navWrapper__uiFgw::after {
+    width: clamp(70px, 25vw, 90px);
+    clip-path: polygon(70px 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
 
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./styles/tabmenu.css ***!
@@ -362,8 +907,18 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-/* เมนูหลัก */
+.navbar {
+  background-color: #0d3973;
+  display: flex;
+  justify-content: center; /* ✅ จัดให้อยู่กึ่งกลางแนวนอน */
+  align-items: center;
+  padding: 0px 10px;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
 .navmenu {
   margin-block: 0;
 }
@@ -375,39 +930,57 @@ ul {
   gap: 30px;
   padding: 10px;
   margin: 0;
+  background-color: #0d3973;
 }
-
-.navmenu .nav-root li a {
-  color: #102e50;
-  text-decoration: none;
+.navmenu .nav-root > li > a {
   position: relative;
-  transition: color 0.3s ease;
-  cursor: pointer;
+  display: inline-block;
+  padding: 5px 8px 4px;
+  font-size: 16px;
   font-weight: 400;
-  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  /* transition: color 0.3s ease;
+  position: relative; /* ต้องกำหนดเพื่อให้ ::after ใช้อ้างอิง */
+  /* display: inline-block;  */
 }
 
-.navmenu .nav-root li a:hover {
-  color: #5c83b6;
+.navmenu .nav-root > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0; /* ✅ เริ่มที่ซ้ายของข้อความ */
+  bottom: 0;
+  height: 2.3px;
+  width: 0;
+  background-color: transparent;
+  /* transition: width 0.4s ease-in-out; */
+  /* pointer-events: none; */
 }
 
-.navmenu .nav-root li a:hover::after,
-.navmenu .nav-root li a.active::after {
+/* .navmenu .nav-root > li > a:hover::after {
+  width: 1%; /*  เส้นจะขยายจากซ้ายไปขวา */
+
+/* แสดงเส้นเฉพาะเมื่อ hover เท่านั้น */
+/* .navmenu .nav-root > li > a:hover::after {
   width: 100%;
+}  */
+
+/* สีลิงก์ตอน hover/active */
+.navmenu .nav-root > li > a:hover,
+.navmenu .nav-root > li > a.active {
+  color: #ffc300;
+
+  /* font-weight: 400; ✅ กันไว้ไม่ให้บาง */
 }
 
-.navmenu .nav-root li a.active {
-  color: var(--nav-color-color, #5c83b6);
-}
-
-/* ปุ่ม hamburger */
+/* Hamburger button */
 .hamburger {
   display: none;
   font-size: 28px;
   background: none;
   border: none;
   cursor: pointer;
-  color: #102e50;
+  color: #ffffff;
   margin-left: auto;
 }
 
@@ -426,42 +999,37 @@ ul {
   min-width: 200px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  padding: 0;
   display: flex !important;
   flex-direction: column;
+  padding: 0;
+  font-weight: 400;
 }
 
-.dropdown-menu li {
+.dropdown-menu li,
+.brand-submenu li {
   width: 100%;
   padding: 0;
 }
 
-.dropdown-menu li a {
+.dropdown-menu li a,
+.brand-submenu li a {
   display: block;
-  width: 100%;
-  padding: 15px 20px;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 1.5;
   text-decoration: none;
   color: #102e50;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  box-sizing: border-box;
+  background-color: #ffffff;
 }
 
-.dropdown-menu li:hover a {
+.dropdown-menu li:hover a,
+.brand-submenu li:hover a {
   background-color: rgb(240, 240, 240);
   color: #5c83b6;
 }
-.dropdown-menu.level-1 {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border: 1px solid #ccc;
-  min-width: 200px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  padding: 0;
-}
+
 /* Submenu */
 .brand-submenu {
   position: absolute;
@@ -474,82 +1042,98 @@ ul {
   min-width: 180px;
   z-index: 1100;
   padding: 0;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
 .brand-submenu li {
   background: #ffffff;
 }
 
+/* แก้ไข padding และ line-height ให้เท่ากับเมนูหลัก */
 .brand-submenu li a {
   color: #102e50 !important;
   background-color: #ffffff !important;
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding: 15px 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   display: block;
+  box-sizing: border-box;
 }
 
 .brand-submenu li a:hover,
 .brand-submenu li a.active {
-  color: #608BC1 !important;
+  color: #608bc1 !important;
   background-color: #eff3f84b !important;
 }
-
-/* dropdown-toggle */
+.dropdown-item {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .dropdown-toggle {
+  padding: 12px 20px !important; /* ปรับ padding แนวตั้ง เพิ่มบ้างให้พอดี */
+  line-height: 1.2 !important;
+  display: block;
+  box-sizing: border-box;
   color: #102e50;
   font-weight: 400;
-  line-height: 1;
-  padding: 10px 20px;
-  display: block;
   transition: color 0.2s ease;
 }
-
 .dropdown-item:hover .dropdown-toggle {
-  color: #608BC1;
-  background: #eff3f84b;
+  color: #608bc1;
 }
 
 /* Active link */
 .navmenu .dropdown-menu a.active {
   color: #ffffff;
 }
+
 .dropdown-item {
   position: relative; /* สำคัญมาก */
-}
-/* ทำให้เมนู dropdown หลัก (บริการและผลิตภัณฑ์) เมื่อ active เป็นสีฟ้า */
-.nav-root > .dropdown.active > a {
-  color: #608BC1 !important;
-  border-radius: 4px;
 }
 
 /* ทำให้สินค้าที่ active ใน dropdown เป็นสีฟ้า */
 .dropdown-item.active > .dropdown-toggle {
-  color: #608BC1 !important;
+  color: #608bc1 !important;
   border-radius: 4px;
 }
 
 /* hover ของ dropdown item */
 .dropdown-item:hover > .dropdown-toggle {
-  color: #608BC1;
+  color: #608bc1;
   background-color: #eff3f84b;
+}
+/* ลบเส้นสีส้มในเมนูย่อย dropdown และ brand submenu */
+.dropdown-menu li a::after,
+.brand-submenu li a::after {
+  content: none !important;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0px 20px;
+  }
+
   .hamburger {
     display: block;
+    color: white;
+    padding: 0px 2;
+    font-size: 30px;
+    align-self: flex-end;
+    margin-top: 5px; 
   }
 
   .navmenu {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
+    align-items: stretch;
+    background-color: #0d3973;
     width: 100%;
-    padding: 10px 20px;
-    border-top: 1px solid #ccc;
-    position: relative;
-    z-index: 1000;
+    padding: 10px 15px;
   }
 
   .navmenu.active {
@@ -558,49 +1142,83 @@ ul {
 
   .navmenu .nav-root {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: stretch;
+    gap: 8px;
     width: 100%;
+    background-color: transparent;
   }
 
   .navmenu .nav-root li a {
-    padding: 15px 20px;
     width: 100%;
+    padding: 10px 16px;
+    font-size: 17px;
+    border-radius: 6px;
   }
 
-  /* Make dropdown full width */
+  .dropdown-toggle {
+    padding-left: 50px !important;
+    background-color: transparent !important; /* ✅ แก้ตรงนี้ */
+    color: #ffffff !important;
+  }
+.dropdown-item:hover .dropdown-toggle {
+  color: #ffc300 !important; /* สีส้ม */
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  
+}
+
   .dropdown-menu,
   .dropdown-menu.level-1 {
     position: static !important;
-    width: 100%;
-    box-shadow: none;
-    border: none;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
     padding: 0;
-    background-color: transparent;
-  }
-
-  .dropdown-menu li a {
     width: 100%;
-    padding: 12px 25px;
-    background-color: transparent;
-    color: #102e50;
+    z-index: auto;
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
   }
 
-  .dropdown-menu li:hover a {
-    background-color: #f0f0f0;
+  .dropdown-item.active > .dropdown-toggle {
+    color: #ffc300 !important;
+    border-radius: 6px;
   }
-
-  /* Brand submenu inside dropdown */
   .brand-submenu {
-    position: static;
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
+    position: static !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
     padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    width: 100%;
+    
+  }
+
+  .brand-submenu li {
+    background-color: transparent !important;
   }
 
   .brand-submenu li a {
-    padding: 10px 25px;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    padding: 10px 90px !important;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .brand-submenu li a:hover{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffc300 !important;
+
+  }
+  .brand-submenu li a.active {
+    background-color: transparent !important;
+    color: #ffc300 !important;
   }
 }
 
@@ -770,7 +1388,7 @@ ul {
   font-weight: 300;
 }
 
-:root {
+/* :root {
   --nav-color: #102e50;
   --nav-hover-color: gray;
   --accent-color: #e78b48;
@@ -781,7 +1399,7 @@ ul {
   --nav-mobile-background-color: #fff;
   --default-color: #000;
   --contrast-color: #fff;
-}
+} */
 
 body {
   margin: 0;

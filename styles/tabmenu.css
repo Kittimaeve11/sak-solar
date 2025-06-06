@@ -3,8 +3,18 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-/* เมนูหลัก */
+.navbar {
+  background-color: #0d3973;
+  display: flex;
+  justify-content: center; /* ✅ จัดให้อยู่กึ่งกลางแนวนอน */
+  align-items: center;
+  padding: 0px 10px;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
 .navmenu {
   margin-block: 0;
 }
@@ -16,39 +26,57 @@ ul {
   gap: 30px;
   padding: 10px;
   margin: 0;
+  background-color: #0d3973;
 }
-
-.navmenu .nav-root li a {
-  color: #102e50;
-  text-decoration: none;
+.navmenu .nav-root > li > a {
   position: relative;
-  transition: color 0.3s ease;
-  cursor: pointer;
+  display: inline-block;
+  padding: 5px 8px 4px;
+  font-size: 16px;
   font-weight: 400;
-  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  /* transition: color 0.3s ease;
+  position: relative; /* ต้องกำหนดเพื่อให้ ::after ใช้อ้างอิง */
+  /* display: inline-block;  */
 }
 
-.navmenu .nav-root li a:hover {
-  color: #5c83b6;
+.navmenu .nav-root > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0; /* ✅ เริ่มที่ซ้ายของข้อความ */
+  bottom: 0;
+  height: 2.3px;
+  width: 0;
+  background-color: transparent;
+  /* transition: width 0.4s ease-in-out; */
+  /* pointer-events: none; */
 }
 
-.navmenu .nav-root li a:hover::after,
-.navmenu .nav-root li a.active::after {
+/* .navmenu .nav-root > li > a:hover::after {
+  width: 1%; /*  เส้นจะขยายจากซ้ายไปขวา */
+
+/* แสดงเส้นเฉพาะเมื่อ hover เท่านั้น */
+/* .navmenu .nav-root > li > a:hover::after {
   width: 100%;
+}  */
+
+/* สีลิงก์ตอน hover/active */
+.navmenu .nav-root > li > a:hover,
+.navmenu .nav-root > li > a.active {
+  color: #ffc300;
+
+  /* font-weight: 400; ✅ กันไว้ไม่ให้บาง */
 }
 
-.navmenu .nav-root li a.active {
-  color: var(--nav-color-color, #5c83b6);
-}
-
-/* ปุ่ม hamburger */
+/* Hamburger button */
 .hamburger {
   display: none;
   font-size: 28px;
   background: none;
   border: none;
   cursor: pointer;
-  color: #102e50;
+  color: #ffffff;
   margin-left: auto;
 }
 
@@ -67,42 +95,37 @@ ul {
   min-width: 200px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  padding: 0;
   display: flex !important;
   flex-direction: column;
+  padding: 0;
+  font-weight: 400;
 }
 
-.dropdown-menu li {
+.dropdown-menu li,
+.brand-submenu li {
   width: 100%;
   padding: 0;
 }
 
-.dropdown-menu li a {
+.dropdown-menu li a,
+.brand-submenu li a {
   display: block;
-  width: 100%;
-  padding: 15px 20px;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 1.5;
   text-decoration: none;
   color: #102e50;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  box-sizing: border-box;
+  background-color: #ffffff;
 }
 
-.dropdown-menu li:hover a {
+.dropdown-menu li:hover a,
+.brand-submenu li:hover a {
   background-color: rgb(240, 240, 240);
   color: #5c83b6;
 }
-.dropdown-menu.level-1 {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border: 1px solid #ccc;
-  min-width: 200px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  padding: 0;
-}
+
 /* Submenu */
 .brand-submenu {
   position: absolute;
@@ -115,82 +138,98 @@ ul {
   min-width: 180px;
   z-index: 1100;
   padding: 0;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
 .brand-submenu li {
   background: #ffffff;
 }
 
+/* แก้ไข padding และ line-height ให้เท่ากับเมนูหลัก */
 .brand-submenu li a {
   color: #102e50 !important;
   background-color: #ffffff !important;
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding: 15px 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   display: block;
+  box-sizing: border-box;
 }
 
 .brand-submenu li a:hover,
 .brand-submenu li a.active {
-  color: #608BC1 !important;
+  color: #608bc1 !important;
   background-color: #eff3f84b !important;
 }
-
-/* dropdown-toggle */
+.dropdown-item {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .dropdown-toggle {
+  padding: 12px 20px !important; /* ปรับ padding แนวตั้ง เพิ่มบ้างให้พอดี */
+  line-height: 1.2 !important;
+  display: block;
+  box-sizing: border-box;
   color: #102e50;
   font-weight: 400;
-  line-height: 1;
-  padding: 10px 20px;
-  display: block;
   transition: color 0.2s ease;
 }
-
 .dropdown-item:hover .dropdown-toggle {
-  color: #608BC1;
-  background: #eff3f84b;
+  color: #608bc1;
 }
 
 /* Active link */
 .navmenu .dropdown-menu a.active {
   color: #ffffff;
 }
+
 .dropdown-item {
   position: relative; /* สำคัญมาก */
-}
-/* ทำให้เมนู dropdown หลัก (บริการและผลิตภัณฑ์) เมื่อ active เป็นสีฟ้า */
-.nav-root > .dropdown.active > a {
-  color: #608BC1 !important;
-  border-radius: 4px;
 }
 
 /* ทำให้สินค้าที่ active ใน dropdown เป็นสีฟ้า */
 .dropdown-item.active > .dropdown-toggle {
-  color: #608BC1 !important;
+  color: #608bc1 !important;
   border-radius: 4px;
 }
 
 /* hover ของ dropdown item */
 .dropdown-item:hover > .dropdown-toggle {
-  color: #608BC1;
+  color: #608bc1;
   background-color: #eff3f84b;
+}
+/* ลบเส้นสีส้มในเมนูย่อย dropdown และ brand submenu */
+.dropdown-menu li a::after,
+.brand-submenu li a::after {
+  content: none !important;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0px 20px;
+  }
+
   .hamburger {
     display: block;
+    color: white;
+    padding: 0px 2;
+    font-size: 30px;
+    align-self: flex-end;
+    margin-top: 5px; 
   }
 
   .navmenu {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
+    align-items: stretch;
+    background-color: #0d3973;
     width: 100%;
-    padding: 10px 20px;
-    border-top: 1px solid #ccc;
-    position: relative;
-    z-index: 1000;
+    padding: 10px 15px;
   }
 
   .navmenu.active {
@@ -199,48 +238,82 @@ ul {
 
   .navmenu .nav-root {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: stretch;
+    gap: 8px;
     width: 100%;
+    background-color: transparent;
   }
 
   .navmenu .nav-root li a {
-    padding: 15px 20px;
     width: 100%;
+    padding: 10px 16px;
+    font-size: 17px;
+    border-radius: 6px;
   }
 
-  /* Make dropdown full width */
+  .dropdown-toggle {
+    padding-left: 50px !important;
+    background-color: transparent !important; /* ✅ แก้ตรงนี้ */
+    color: #ffffff !important;
+  }
+.dropdown-item:hover .dropdown-toggle {
+  color: #ffc300 !important; /* สีส้ม */
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  
+}
+
   .dropdown-menu,
   .dropdown-menu.level-1 {
     position: static !important;
-    width: 100%;
-    box-shadow: none;
-    border: none;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
     padding: 0;
-    background-color: transparent;
-  }
-
-  .dropdown-menu li a {
     width: 100%;
-    padding: 12px 25px;
-    background-color: transparent;
-    color: #102e50;
+    z-index: auto;
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
   }
 
-  .dropdown-menu li:hover a {
-    background-color: #f0f0f0;
+  .dropdown-item.active > .dropdown-toggle {
+    color: #ffc300 !important;
+    border-radius: 6px;
   }
-
-  /* Brand submenu inside dropdown */
   .brand-submenu {
-    position: static;
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
+    position: static !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
     padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    width: 100%;
+    
+  }
+
+  .brand-submenu li {
+    background-color: transparent !important;
   }
 
   .brand-submenu li a {
-    padding: 10px 25px;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    padding: 10px 90px !important;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .brand-submenu li a:hover{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffc300 !important;
+
+  }
+  .brand-submenu li a.active {
+    background-color: transparent !important;
+    color: #ffc300 !important;
   }
 }

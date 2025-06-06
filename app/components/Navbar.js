@@ -5,8 +5,12 @@ import { useLocale } from '../Context/LocaleContext';
 import Link from 'next/link';
 import '../../styles/navbar.css';
 import { FaPhone } from 'react-icons/fa6';
+import { usePathname } from 'next/navigation';
+
 export default function Navbar() {
   const { messages, switchLocale, locale } = useLocale();
+  const pathname = usePathname();
+  const isContactPage = pathname === '/Contact';
 
   return (
     <nav className="navbar">
@@ -40,15 +44,16 @@ export default function Navbar() {
           </span>
         </div>
         {/* ปุ่มติดต่อเรา + โทร */}
-        <div className="contactActions">
+        {/* <div className="contactActions">
           <a href="tel:1487" className="callLink" title="โทร 1487">
             <FaPhone className="phoneIcon" />
-            <span className="phoneNumber">1487</span>          </a>
+            <span className="phoneNumber">1487</span>          </a> */}
           <Link href="/Contact/">
-            <button className="contactButton">{messages.contact}</button>
+            <button className={`contactButton ${isContactPage ? 'active' : ''}`}>
+              {messages.contact}
+            </button>
           </Link>
-        </div>
-
+        {/* </div> */}
       </div>
 
     </nav >
