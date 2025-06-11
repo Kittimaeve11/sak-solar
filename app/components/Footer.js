@@ -103,11 +103,13 @@ export default function Footer() {
             )}
           </div>
         </div>
+      <div className={styles.footerBottomImage}></div>
+
       </footer>
 
       <div className={styles.footerBottomWrapper}>
         <div className={styles.footerBottom}>
-          © 2019 Copyright: Saksiam Leasing Public Company Limited. All Rights Reserved.
+          © 2025 Copyright: Saksiam Leasing Public Company Limited. All Rights Reserved.
           <div className={styles.logoGroup}>
             <Image
               src="/images/logo3.8549861c.png"
