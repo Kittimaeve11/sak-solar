@@ -183,7 +183,7 @@ export default function TabMenu() {
               {messages.editorial}
             </Link>
           </li>
-
+              
         </ul>
       </nav>
     </nav>
