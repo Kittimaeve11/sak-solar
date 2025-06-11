@@ -5,13 +5,13 @@ import { useLocale } from '../Context/LocaleContext';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { FaPhone } from 'react-icons/fa';
-
 import Link from 'next/link';
 import styles from '../../styles/Navbar.module.css';
 
 export default function Navbar() {
     const { messages, switchLocale, locale } = useLocale();
     const pathname = usePathname();
+    const isHomePage = pathname === '/';
     const isAboutPage = pathname === '/About';
     const isContactPage = pathname === '/Contact';
 
@@ -55,6 +55,16 @@ export default function Navbar() {
                             <span className={styles.phoneNumber}>1487</span>
                         </a>
                         <div className="flex items-center gap-2">
+                            <Link
+                                href="/"
+                                className={`${styles.contact} ${isHomePage ? styles.active : ''}`}
+                            >
+                                {messages.backpage}
+                            </Link>
+
+                            <span> | </span>
+
+
                             <Link
                                 href="/About/"
                                 className={`${styles.contact} ${isAboutPage ? styles.active : ''}`}
