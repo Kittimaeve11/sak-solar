@@ -11,7 +11,7 @@ import '../../styles/contact.css';
 import Link from "next/link";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Image from 'next/image';
 
 export default function Page() {
   const { messages, locale } = useLocale(); // ✅ ใช้ locale จาก Context
@@ -157,14 +157,20 @@ export default function Page() {
     }
   };
 
+
   const getIcon = (id) => {
     switch (id) {
-      case 1: return <img src="/images/building.png" alt="Building" style={{ width: 28, height: 28 }} />;
-      case 2: return <img src="/images/phone.png" alt="Phone" style={{ width: 25, height: 25 }} />;
-      case 3: return <img src="/images/mail.png" alt="Email" style={{ width: 28, height: 28 }} />;
-      default: return null;
+      case 1:
+        return <Image src="/images/building.png" alt="Building" width={28} height={28} />;
+      case 2:
+        return <Image src="/images/phone.png" alt="Phone" width={25} height={25} />;
+      case 3:
+        return <Image src="/images/mail.png" alt="Email" width={28} height={28} />;
+      default:
+        return null;
     }
   };
+
 
   return (
     <div>
@@ -187,14 +193,15 @@ export default function Page() {
         }}
       />
 
-      <div className="banner-container">
-        <picture>
-          <source srcSet="/images/contact_banner67_rp.jpg" media="(max-width: 768px)" />
-          <img src="/images/contact_banner67.jpg" alt="Contact Banner" className="banner-image" />
-        </picture>
-      </div>
 
       <main className="layout-container">
+        <div className="banner-container">
+          <picture>
+            <source srcSet="/images/contact_banner67_rp.jpg" media="(max-width: 768px)" />
+            <img src="/images/contact_banner67.jpg" alt="Contact Banner" className="banner-image" />
+          </picture>
+        </div>
+
         <p className="centeredText">{messages.contact}</p>
         <div className="contactGrid">
           {/* ซ้ายบน: ข้อมูลบริษัท */}
@@ -218,7 +225,14 @@ export default function Page() {
 
           {/* ขวาบน: รูปบริษัท */}
           <div className="gridItem companyImageWrapper">
-            <img src="/images/company.jpg" alt="อาคารบริษัท" className="companyImage" />
+            <Image
+              src="/images/company.jpg"
+              alt="อาคารบริษัท"
+              className="companyImage"
+              width={800}  // set actual image width
+              height={600} // set actual image height
+              priority     // optional: improves LCP by preloading the image
+            />
           </div>
 
           {/* ซ้ายล่าง: แผนที่ */}
@@ -237,7 +251,7 @@ export default function Page() {
               {socials.map((item, index) => (
                 <div key={index} className="socialItem" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <span className="iconFL">{iconComponentByKey[item.icon]}</span>
-                  <a
+                  <Link
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -245,23 +259,23 @@ export default function Page() {
                     style={{ textDecoration: 'none', color: 'inherit' }}
                   >
                     {item.name} | {item.name1}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <hr
+        {/* <hr
           style={{
             border: 'none',
             borderTop: '2px solid #CBDCEB',
             width: 'calc(100% - 5px)', // ลด 10px ซ้าย + ขวา
             margin: '1rem 10px'
           }}
-        />
+        /> */}
 
-        <h1 style={{ textAlign: 'center', padding: '0.5rem', color: '#102E50', fontWeight: 300 }}>{messages.ask}</h1>
+        {/* <h1 style={{ textAlign: 'center', padding: '0.5rem', color: '#102E50', fontWeight: 300 }}>{messages.ask}</h1> */}
 
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-grid">
