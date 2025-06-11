@@ -1,17 +1,22 @@
 .footer {
   width: 100%;
-  background-image: url("/images/footer-copy.jpg");
+  background-image: url("/images/footer-2.jpg");
   background-size: cover;
-  background-position: center calc(50px); /* หรือ center calc(100% - 50px); */
+  background-position: center calc(50px); /* หรือ center bottom */
   background-repeat: no-repeat;
   color: white;
   font-size: 14px;
-  padding: 2rem 0 0 0;
+  padding: 3rem 0 2rem 0;
   box-sizing: border-box;
-  min-height: 520px; /* ปรับตามความสูงเนื้อหา + footerBottomWrapper */
+  min-height: 520px; /* ปรับตามความสูงรวมของ footer */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  padding-bottom: 30px; /* ✅ เว้นพื้นที่ให้รูป overlay ด้านล่าง */
+  z-index: 0;
+  overflow: hidden;
+  
 }
 
 .footerContent {
@@ -20,7 +25,8 @@
   justify-content: space-between;
   gap: 30px;
   margin: 0 auto;
-  padding: 0 5rem; /* ✅ เพิ่มระยะห่างซ้ายขวา */
+  padding: 0 5rem;
+  /* ✅ เพิ่มระยะห่างซ้ายขวา */
 }
 
 .column {
@@ -53,19 +59,33 @@
   gap: 10px;
 }
 
+
 /* ไม่ใส่พื้นหลังซ้ำ ให้ background ของ footer เห็นได้ต่อเนื่อง */
 .footerBottomWrapper {
-  min-height: 0px;
-  background: transparent;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1; /* ต้องน้อยกว่า pseudo-element */
+}
+.footerBottomImage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 18%; /* ปรับตามขนาดรูป */
+  background-image: url("/images/footerbottom-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none; /* ✅ ป้องกันไม่ให้คลิกโดน */
 }
 /* เพื่อความชัดเจนและอ่านง่าย */
 .footerBottom {
   max-width: 1200px;
   width: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,26 +93,35 @@
   color: #243865;
   z-index: 1;
 }
+
 .footerContent {
   max-width: 1200px;
-  margin: 0 auto; /* กึ่งกลาง */
-  width: 100%; /* เต็มความกว้างบนหน้าจอเล็ก */
-  padding: 0 1rem; /* เว้นขอบซ้ายขวานิดหน่อย */
+  margin: 0 auto;
+  /* กึ่งกลาง */
+  width: 100%;
+  /* เต็มความกว้างบนหน้าจอเล็ก */
+  padding: 0 1rem;
+  /* เว้นขอบซ้ายขวานิดหน่อย */
 }
+
 .footerBottomContainer {
   width: 100%;
   background-color: rgb(32, 31, 39);
   border-top: 2px solid #444444;
-  padding: 0; /* เฉพาะแนวตั้ง */
+  padding: 0;
+  /* เฉพาะแนวตั้ง */
 }
+
 .column ul li a {
-  color: #ffffff; /* ตัวหนังสือสีขาว */
+  color: #ffffff;
+  /* ตัวหนังสือสีขาว */
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
 .column ul li a:hover {
-  color: #cccccc; /* สีตอน hover เป็นเทาอ่อน */
+  color: #cccccc;
+  /* สีตอน hover เป็นเทาอ่อน */
 }
 
 .logoGroup {
@@ -104,26 +133,34 @@
   height: auto;
   width: auto;
 }
+
 .logoGroup img {
-  width: 45px; /* ปรับขนาดตามที่ต้องการ */
+  width: 45px;
+  /* ปรับขนาดตามที่ต้องการ */
   height: auto;
 }
+
 .contactSection {
-  margin-top: 1.5rem; /* ✅ ระยะห่างจากรายการด้านบน */
+  margin-top: 1.5rem;
+  /* ✅ ระยะห่างจากรายการด้านบน */
 }
+
 @media (max-width: 600px) {
   .footerBottom {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 1rem; /* ✅ ลด padding ให้พอดี */
+    padding: 0.5rem 1rem;
+    /* ✅ ลด padding ให้พอดี */
     text-align: center;
   }
 
   .footerContent {
     flex-direction: column;
-    gap: 0px; /* ✅ ช่องว่างแต่ละคอลัมน์เล็กลง */
-    padding: 0rem 3rem; /* ✅ ลด padding ด้านบน/ล่าง และซ้าย/ขวา */
+    gap: 0px;
+    /* ✅ ช่องว่างแต่ละคอลัมน์เล็กลง */
+    padding: 0rem 3rem;
+    /* ✅ ลด padding ด้านบน/ล่าง และซ้าย/ขวา */
     align-items: flex-start;
   }
 
@@ -134,13 +171,17 @@
   .column:last-child {
     order: 4;
   }
+
   .contactSection {
-    margin-top: 3rem; /* ✅ บนมือถือ ลดช่องว่างลง */
+    margin-top: 3rem;
+    /* ✅ บนมือถือ ลดช่องว่างลง */
   }
+
   .logoGroup {
     justify-content: center;
     width: 100%;
-    margin-top: 0.5rem; /* ✅ ลดระยะห่างด้านบน */
+    margin-top: 0.5rem;
+    /* ✅ ลดระยะห่างด้านบน */
   }
 
   .logoGroup img {
