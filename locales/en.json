@@ -1,14 +1,14 @@
 {
-  "greeting": "Welcome to Saksiame Solar!", 
-  "home": "Home", 
-  "serviceproduct": "Service & Product", 
-  "editorial": "Editorial", 
+  "greeting": "Welcome to Saksiame Solar!",
+  "home": "Home",
+  "serviceproduct": "Service & Product",
+  "editorial": "Editorial",
   "faq": "FAQ",
   "success": "Success",
-  "about": "About US", 
+  "about": "About US",
   "solar": "Solar cells",
-  "services": "Services", 
-  "contact": "Contact US", 
+  "services": "Services",
+  "contact": "Contact US",
   "search": "Branch Search",
   "ativities": "ativities",
   "company": "SAKSIAM SOLAR ENERGY CO., LTD.",
@@ -29,5 +29,6 @@
   "please_fill": "Please fill in your first and last name.",
   "onlyphone": "Only 10 digits for example",
   "communication": "Communication Channels",
+  "backpage": "back to mainpage",
   "back": "Back"
 }
