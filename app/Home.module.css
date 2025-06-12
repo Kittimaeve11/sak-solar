@@ -90,3 +90,296 @@
 .overlayLink:hover {
   background: rgba(0, 0, 0, 0.7);
 }
+
+.gridWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gridContainer {
+  display: grid;
+  gap: 20px;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(193px, 1fr));
+  max-width: 1200px;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* กริด 5 คอลัมน์สำหรับกรณีมี 5 ไอเท็ม */
+.grid5 {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  /* ใช้ auto แทน 1fr */
+  justify-content: center;
+  /* จัด grid ให้ชิดกลาง */
+  gap: 20px;
+}
+
+/* Responsive: ปรับจำนวนคอลัมน์ตามขนาดหน้าจอ */
+@media (min-width: 640px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* การ์ด */
+.card {
+  background-color: #FAFBFF !important;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* จัดกึ่งกลางแนวตั้งและแนวนอน */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 193px;
+  height: 224px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ไอคอน */
+.icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+/* ป้ายข้อความ */
+.textfree {
+  color: #243865;
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+
+
+/* คำนวณโซลาร์ */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.headersolar {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 400;
+  /* ใช้ Thin */
+
+  color: #F2780C;
+}
+
+.instructions {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  gap: 2px;
+  color: #102E50;
+
+}
+
+.instructions1 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  margin-left: 3.5rem;
+  /* หรือปรับเป็นค่าที่ต้องการ */
+  color: #102E50;
+}
+
+.instructions2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  color: #F2780C;
+}
+
+.recommend {
+  color: #F2780C;
+  font-weight: bold;
+}
+
+.inputWrapper {
+  margin-bottom: 1rem;
+}
+
+.formControl {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #5a8fd9;
+  border-radius: 6px;
+  background-color: #FAFBFF;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #243865;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.formControl:focus {
+  border-color: #243865;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.rangeControl {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 9px;
+  border-radius: 5px;
+  background: #f2f2f2;
+  outline: none;
+  border: 1px solid #ccc;
+  /* เพิ่มขอบ 1px */
+}
+
+/* สำหรับ ตัวเลื่ออน*/
+.rangeControl::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #F2780C;
+  border-radius: 50%;
+  border: none;
+  margin-top: 0px;
+  /* (thumb-height - track-height) / 2 */
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* สำหรับ Firefox */
+.rangeControl::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #F2780C;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.rangeControl::-moz-range-track {
+  height: 6px;
+  background: #f2f2f2;
+  border-radius: 3px;
+}
+
+.usageSplit {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end; /* ชิดขวาทั้งหมด */
+  gap: 1rem; /* ระยะห่างระหว่างปุ่ม */
+  margin-top: 1.5rem;
+}
+
+.buttonPrimary {
+  font-weight: 400;
+  /* ใช้ Thin */
+  padding: 0.6rem 1rem;
+  background-color: #0277bd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.buttonPrimary:hover {
+  background: #004ba0;
+}
+
+.buttonSecondary {
+  font-weight: 400;
+  /* ใช้ Thin */
+
+  padding: 0.6rem 1rem;
+  background-color: white;
+  color: #0277bd;
+  border: 2px solid #0277bd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buttonSecondary:hover {
+  background-color: #0277bd;
+  color: white;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.card {
+  flex: 1 1 45%;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+}
