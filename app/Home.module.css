@@ -175,8 +175,8 @@
 
 /* ป้ายข้อความ */
 .textfree {
-  color: #243865;
-  font-weight: 600;
+  color: #264798;
+  font-weight:400;
   font-size: 0.95rem;
   white-space: pre-wrap;
   text-align: center;
@@ -197,36 +197,40 @@
   }
 }
 
-.container {
-  max-width: 700px;
+.containersolar {
+  background-color: #FAFBFF;
+  padding: 1rem 0;
+  width: 100%;
+}
+.formWrapper {
+  max-width: 590px;
   margin: 0 auto;
   padding: 2rem;
   font-family: sans-serif;
+  border-radius: 8px;
 }
-
 .headersolar {
   font-size: 1.8rem;
   margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 2rem;
   font-weight: 400;
   /* ใช้ Thin */
-
+ text-align: center;
   color: #F2780C;
 }
 
 .instructions {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-  gap: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  gap: 0px;
   color: #102E50;
 
 }
 
 .instructions1 {
   margin-top: 0;
-  margin-bottom: 0.3rem;
-  margin-left: 3.5rem;
-  /* หรือปรับเป็นค่าที่ต้องการ */
+  margin-bottom: 0rem;
+  margin-left: 4rem;
   color: #102E50;
 }
 
@@ -236,6 +240,11 @@
 
   color: #F2780C;
 }
+.solar-form {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
 
 .recommend {
   color: #F2780C;
@@ -243,6 +252,11 @@
 }
 
 .inputWrapper {
+  margin-bottom: 1rem;
+}
+.inputGroupRow {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
@@ -270,7 +284,7 @@
   width: 100%;
   height: 9px;
   border-radius: 5px;
-  background: #f2f2f2;
+  background: #ffffff;
   outline: none;
   border: 1px solid #ccc;
   /* เพิ่มขอบ 1px */
@@ -287,7 +301,6 @@
   margin-top: 0px;
   /* (thumb-height - track-height) / 2 */
   cursor: pointer;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 /* สำหรับ Firefox */
@@ -318,42 +331,7 @@
 .buttonGroup {
   display: flex;
   justify-content: flex-end; /* ชิดขวาทั้งหมด */
-  gap: 1rem; /* ระยะห่างระหว่างปุ่ม */
   margin-top: 1.5rem;
-}
-
-.buttonPrimary {
-  font-weight: 400;
-  /* ใช้ Thin */
-  padding: 0.6rem 1rem;
-  background-color: #0277bd;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.buttonPrimary:hover {
-  background: #004ba0;
-}
-
-.buttonSecondary {
-  font-weight: 400;
-  /* ใช้ Thin */
-
-  padding: 0.6rem 1rem;
-  background-color: white;
-  color: #0277bd;
-  border: 2px solid #0277bd;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.buttonSecondary:hover {
-  background-color: #0277bd;
-  color: white;
 }
 
 .results {
@@ -372,6 +350,12 @@
   text-align: center;
   font-weight: 500;
   animation: fadeInUp 0.6s ease-out;
+}
+.errorText {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
